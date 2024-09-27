@@ -1,0 +1,199 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.header, .footer {
+  color: rgb(0, 0, 0);
+  display: flex;
+  text-align: center;
+  margin: 0px;
+}
+.headerbox {
+  display: grid;
+grid-template-columns: 245px 400px 200px;
+grid-template-rows: 168.5px;
+border: 1px solid rgb(0, 0, 0);
+background-color: #4CAF50;
+}
+
+
+.item1 {
+  width: 225px;
+  height: 214px;
+  justify-self: end;
+  margin-top: 20px;
+} 
+.item2 {
+  font-size: 40px;
+  margin-top: 10px;
+}
+
+.item3 {
+grid-column-start: 2;
+grid-row-start: 2;
+margin-top: -20px;
+font-size: 20px;
+
+}
+
+.item4 {
+  font-size: 30px;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  grid-column-start: 3;
+  border: 1px solid black;
+  height:77.5px;
+  width: 170px;
+  margin-top: 100px;
+  margin-left: -15px;
+}
+
+.obj1 {
+  width: 845px;
+  height: 37.5px;
+  display: flex; /* Flexbox is required to align items */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  border: 1px solid rgb(0, 0, 0);
+  text-align: center; /* This is only for multi-line text */
+  font-size: 20px; /* Correct font-size syntax */
+  font-weight: bold; /* Correct way to make text bold */
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  border-top: none;
+}
+
+.bodybox {
+  width: 845px;
+  height: 700px;
+  display: grid;
+  grid-template-columns: 222.5px 400px 222.5px;
+  grid-template-rows: 3(234.3px);
+  border: 1px solid rgb(0, 0, 0);
+  border-top: none;
+}
+
+.middle-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: repeat(8, 1fr);
+  grid-column-start: 2;
+  border: 1px solid rgb(0, 0, 0);
+  border-bottom: none;
+  height: auto;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  border-top: none;
+  text-align: center;
+  border-left: none;
+  border-right: none;
+}
+
+
+.question{
+  border: solid 1px black;
+  height: 116px;
+  width: 131.3;
+  font-size: 12px;
+  border-top: none;
+}
+
+#q1b, #q2b, #q3b, #a1b, #a2b, #a3b{
+  border-left: none;
+  border-right: none;
+}
+
+.answer{
+  border: solid 1px black;
+  height: 116px;
+  width: 131.3;
+  border-top: none;
+}
+
+.columnl1 {
+  grid-column-start: 1;
+  height: 233.3px;
+  width: 222.5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px black solid;
+
+  perspective: 800px; /* Increase perspective for better 3D depth */
+}
+
+
+.columnr1 {
+grid-column-start: 3;
+height: 234.3px;
+width: 222.5px;
+text-align: center;
+border-bottom: 1px black solid;
+}
+
+.box {
+  background-color: #e3e3e3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.cube {
+  margin-top: -50px;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(-30deg) rotateY(-45deg); /* More balanced angle for symmetry */
+}
+
+.face {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.3); /* Transparent face */
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: black;
+}
+
+/* Positioning each face of the cube */
+.front  { transform: translateZ(50px);
+background-color:#cdf2f7cb; }
+.back   { transform: rotateY(180deg) translateZ(50px); }
+.left   { transform: rotateY(-90deg) translateZ(50px); }
+.right  { transform: rotateY(90deg) translateZ(50px); 
+  background-color:#699095cb; 
+}
+.top    { transform: rotateX(90deg) translateZ(50px);
+  background-color:#265e65cb; 
+}
+.bottom { transform: rotateX(-90deg) translateZ(50px); }
+
+/* Labels for the cube sides */
+.label {
+  position: absolute;
+  font-size: 14px;
+  background-color: white;
+  padding: 2px 5px;
+  border: 1px solid black;
+}
+.label-top {
+  top: -20px;
+  left: 35px;
+}
+.label-left {
+  top: 45px;
+  left: -70px;
+}
+.label-front {
+  top: 130px;
+  left: 35px;
+}
+
